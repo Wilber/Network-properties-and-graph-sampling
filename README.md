@@ -1,2 +1,7 @@
 # Network-properties-and-graph-sampling
-Given a directed graph, sample sub-graph and fit power-law on degree distribution
+These R codes accompany the Ouma et al (2018) publication in PLoS Computational Biology entitled "Topological and statistical analyses of gene regulatory networks reveal unifying yet quantitatively different emergent properties". 
+
+randomEdgeSampling.r: randomly samples subnetworks - and fits a power law function on their out-degree - given an observed gene regulatoru network (GRN)
+predictPDIs.r: predicts the number of protein-DNA interactions (PDIs) given the power law exponent and the number of transcription factors (TFs) of an organism
+createSyntheticGRNsAndSample.r: given the predicted number of PDIs for a complete yeast GRN, this code creates a complete synthetic (in silico) GRN and samples sub-nets from the GRN, fitting power law function in each sampling.
+LorenzCurves.r: Use of Lorenz curves to describe the 'inequality' of TF binding events in GRNs
