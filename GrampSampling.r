@@ -49,14 +49,15 @@ degreePowerlawFit$setPars(estimate_pars(degreePowerlawFit))
 
 ###Set-up clusters!
 #detectCores() detect how many cores are available
-# Create cluster with 6 cores
+# Create cluster with 15 cores
 cl <- makeCluster(15) 
 # Register cluster
 registerDoParallel(cl)
 # getDoParWorkers() # Find out how many cores are being used
 
 
-percentages<-c(0.95,0.90,0.85,0.80,0.75,0.70,0.65,0.60,0.55,0.50,0.45,0.40,0.35,0.30,0.25,0.20,0.15,0.10, 0.05, 0.010, 0.005, 0.0025, 0.001)
+#percentages<-c(0.95,0.90,0.85,0.80,0.75,0.70,0.65,0.60,0.55,0.50,0.45,0.40,0.35,0.30,0.25,0.20,0.15,0.10, 0.05, 0.010, 0.005, 0.0025, 0.001)
+percentages<-seq(0.1,0.95,0.05)
 for (j in 1:23) { 
   
 KS_distances<-numeric(1000)
